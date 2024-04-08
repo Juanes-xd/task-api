@@ -1,5 +1,15 @@
-export interface UpdateTask {
+import { IsString, IsOptional } from 'class-validator';
+
+export class UpdateTaskDto {
+  @IsOptional()
+  @IsString()
   title?: string;
+
+  @IsOptional()
+  @IsString()
   description?: string;
+
+  @IsOptional()
+  @IsString()
   done?: string;
 }
